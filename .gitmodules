@@ -1,0 +1,3 @@
+[submodule "lib/frame"]
+	path = lib/frame
+	url = git@github.com:leoagomes/frame.git
