@@ -6,6 +6,8 @@ require 'app/constants/sprites.rb'
 
 require 'app/utils/centerable.rb'
 
+require 'app/tools/asset_viewer.rb'
+
 require 'app/player.rb'
 require 'app/camera.rb'
 require 'app/game.rb'
