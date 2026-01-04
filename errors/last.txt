@@ -1,0 +1,6 @@
+* EXCEPTION:
+* EXCEPTION: ~Runtime#add_to_require_queue~ failed for =app/tick.rb=.
+Rendering::Circle is not a class
+** Backtrace:
+*** app/tick.rb:2
+*** app/tick.rb:1
