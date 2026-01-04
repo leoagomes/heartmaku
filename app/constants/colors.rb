@@ -1,0 +1,35 @@
+module Constants
+  module Colors
+    PALETTE = {
+      black:         [0x00, 0x00, 0x00],
+      dark_gray:     [0x55, 0x55, 0x55],
+      blue:          [0x00, 0x00, 0xAA],
+      light_blue:    [0x55, 0x55, 0xFF],
+      green:         [0x00, 0xAA, 0x00],
+      light_green:   [0x55, 0xFF, 0x55],
+      cyan:          [0x00, 0xAA, 0xAA],
+      light_cyan:    [0x55, 0xFF, 0xFF],
+      red:           [0xAA, 0x00, 0x00],
+      light_red:     [0xFF, 0x55, 0x55],
+      magenta:       [0xAA, 0x00, 0xAA],
+      light_magenta: [0xFF, 0x55, 0xFF],
+      brown:         [0xAA, 0x55, 0x00],
+      yellow:        [0xFF, 0xFF, 0x55],
+      light_gray:    [0xAA, 0xAA, 0xAA],
+      white:         [0xFF, 0xFF, 0xFF],
+    }.transform_values do |(r,g,b)|
+      { r: r, g: g, b: b, a: 0xFF }
+    end
+
+    def self.[](name)
+      PALETTE[name]
+    end
+
+    def load_color_data!(color)
+      @r = color.r
+      @g = color.g
+      @b = color.b
+      @a = color.a
+    end
+  end
+end
