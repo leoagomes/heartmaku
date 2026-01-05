@@ -24,12 +24,5 @@ module Constants
     def self.[](name)
       PALETTE[name]
     end
-
-    def load_color_data!(color)
-      @r = color.r
-      @g = color.g
-      @b = color.b
-      @a = color.a
-    end
   end
 end

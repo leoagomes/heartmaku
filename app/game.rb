@@ -7,10 +7,10 @@ class Game
 
   def initialize
     @camera = Camera.new(x: 0, y: 0, world_w: WORLD_WIDTH, world_h: WORLD_HEIGHT)
-    @player = Player.new(x: 100, y: 100)
+    @player = Entities::Player.new(x: 100, y: 100)
     @camera.center = [@player.x, @player.y]
     @bullets = []
-    @spatial = Spatial::Hash
+    @spatial = Spatial::Hash.new
   end
 
   def tick
@@ -23,6 +23,8 @@ class Game
   end
 
   def update
+    player.args = args
+    player.tick
   end
 
   def draw
