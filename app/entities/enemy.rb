@@ -1,9 +1,4 @@
 module Entities
-  class Enemy
-    include Spriteable
-    include Colored
-
-    attr_gtk
-    attr_sprite
+  class Enemy < Base
   end
 end

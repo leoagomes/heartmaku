@@ -1,10 +1,5 @@
 module Entities
-  class Bullet
-    include Spriteable
-
-    attr_sprite
-    attr_gtk
-
+  class Bullet < Base
     attr_accessor :velocity
 
     def initialize(velocity: Vector.zero)
