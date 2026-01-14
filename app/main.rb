@@ -1,10 +1,10 @@
 require 'lib/frame/vector.rb'
 require 'lib/frame/spatial.rb'
 
-require 'app/concerns/argumentable.rb'
-require 'app/concerns/colored.rb'
-require 'app/concerns/spriteable.rb'
-require 'app/concerns/kinematic.rb'
+require 'app/components/arguments.rb'
+require 'app/components/color.rb'
+require 'app/components/sprite.rb'
+require 'app/components/kinematic.rb'
 
 require 'app/constants/colors.rb'
 require 'app/constants/sprites.rb'

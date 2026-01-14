@@ -7,8 +7,8 @@ module Entities
     def initialize(x:, y:, velocity: Vector.zero)
       with_color!(Constants::Colors[:white])
       with_sprite!(Constants::Sprites::OneBitPack[:circle])
-      @x = x
-      @y = y
+      @x = 0
+      @y = 0
       @w = 16
       @h = 16
       @velocity = velocity
