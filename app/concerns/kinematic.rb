@@ -1,7 +1,7 @@
 module Kinematic
-  def move!
-    self.x += self.velocity.x
-    self.y += self.velocity.y
+  def apply_velocity!
+    @x += @velocity.x
+    @y += @velocity.y
     self
   end
 end

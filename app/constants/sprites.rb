@@ -8,6 +8,7 @@ module Constants
 
       SPRITES = {
         heart: [39, 10],
+        circle: [39, 13],
       }.transform_values do |(x, y)|
         path = PATH
         w = TILE_WIDTH

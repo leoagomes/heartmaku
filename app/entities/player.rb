@@ -17,8 +17,8 @@ module Entities
       x = args.inputs.left_right
       y = args.inputs.up_down
 
-      self.x += x
-      self.y += y
+      @x += x
+      @y += y
     end
   end
 end
