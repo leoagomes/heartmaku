@@ -11,14 +11,16 @@ class World
   attr_accessor :entities, :spatial, :camera, :player
 
   def initialize
-    @camera = Camera.new(world_w: WIDTH, world_h: HEIGHT)
+    # @camera = Camera.new(world_w: WIDTH, world_h: HEIGHT)
     @spatial = Spatial::Hash.new(spacing: SPATIAL_SPACING, max_entries: SPATIAL_MAX_ENTRIES)
     @player = Entities::Player.new(x: 100, y: 100)
     @entities = []
 
     # setup code
     @entities << @player
-    @camera.center = Vector.from(player)
+    # @camera.center = Vector.from(player)
+
+    Grid.origin_center!
   end
 
   def tick
@@ -39,15 +41,14 @@ class World
     background_color = Constants::Colors[:black]
     args.outputs.background_color = background_color
 
-    camera
-      .with_args!(args)
-      .render do |target|
-        target.background_color = background_color
-
-        spatial.query(camera.world_aabb) do |entity|
-          target.primitives << entity
-        end
-      end
+    # camera
+    #   .with_args!(args)
+    #   .render do |target|
+    #     target.background_color = background_color
+    #     spatial.query(camera.world_aabb) do |entity|
+    #       target.primitives << entity
+    #     end
+    #   end
 
     args.outputs.debug << args.gtk.framerate_diagnostics_primitives
   end

@@ -7,5 +7,10 @@ module Entities
       @anchor_x = 0.5
       @anchor_y = 0.5
     end
+
+    def tick
+      @x += velocity.x
+      @y += velocity.y
+    end
   end
 end
