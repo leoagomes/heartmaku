@@ -1,14 +1,8 @@
 class Spawner < Enumerator
-  def self.of(klass)
-    new do |yielder|
-      loop do
-        yielder << klass.new(x: 0, y: 0)
-      end
+  class << self
+    def from(klass)
+      new { |y| y << klass.new(x: 0, y: 0) }
     end
-  end
-
-  def self.single(klass)
-    new { |y| y << klass.new(x: 0, y: 0) }
   end
 
   def with_velocity!(velocity)

@@ -1,5 +1,22 @@
 module Constants
   module Colors
+    module AppleII
+      PALETTE = {
+        black: [0x00, 0x00, 0x00],
+        white: [0xFF, 0xFF, 0xFF],
+        green: [0x43, 0xC3, 0x00],
+        purple: [0xB6, 0x3D, 0xFF],
+        orange: [0xEA, 0x5D, 0x15],
+        blue: [0x10, 0xA4, 0xE3],
+      }.transform_values do |(r, g, b)|
+        { r: r, g: g, b: b, a: 0xFF }
+      end.freeze
+
+      def self.[](name)
+        PALETTE[name]
+      end
+    end
+
     PALETTE = {
       black:         [0x00, 0x00, 0x00],
       dark_gray:     [0x55, 0x55, 0x55],
