@@ -35,6 +35,12 @@ module Components
       return @vx, @vy
     end
 
+    def with_velocity!(vx: nil, vy: nil)
+      @vx = vx unless vx.nil?
+      @vy = vy unless vy.nil?
+      self
+    end
+
     def apply_velocity!
       @x += @vx
       @y += @vy

@@ -4,12 +4,9 @@ module Entities
       with_color!(Constants::Colors[:white])
       with_sprite!(Constants::Sprites::OneBitPack[:circle])
       with_anchor_center!
-      @x = x
-      @y = y
-      @w = w
-      @h = h
-      @vx = vx
-      @vy = vy
+      with_position!(x: x, y: y)
+      with_dimensions!(w: w, h: h)
+      with_velocity!(vx: vx, vy: vy)
     end
 
     def tick

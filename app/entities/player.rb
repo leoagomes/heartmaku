@@ -4,8 +4,7 @@ module Entities
       with_sprite!(Constants::Sprites::OneBitPack[:heart])
       with_color!(Constants::Colors[:red])
       with_anchor_center!
-      @x = x
-      @y = y
+      with_position!(x: x, y: y)
       @w = @h = 16
     end
 
