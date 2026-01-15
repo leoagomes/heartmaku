@@ -1,6 +1,8 @@
 module Components
   module Angle
-    attr_accessor :angle
+    def self.included(klass)
+      klass.attr_accessor :angle
+    end
 
     def angle_radians
       @angle.to_radians

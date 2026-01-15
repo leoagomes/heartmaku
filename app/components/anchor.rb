@@ -1,6 +1,8 @@
 module Components
-  module Spatial
-    attr_accessor :anchor_x, :anchor_y
+  module Anchor
+    def self.included(klass)
+      klass.attr_accessor :anchor_x, :anchor_y
+    end
 
     def with_anchor!(x: nil, y: nil)
       @anchor_x = x unless x.nil?

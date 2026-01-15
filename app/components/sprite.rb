@@ -1,6 +1,8 @@
 module Components
   module Sprite
-    attr_sprite
+    def self.included(klass)
+      klass.attr_sprite
+    end
 
     def with_sprite!(sprite)
       @path = sprite.path

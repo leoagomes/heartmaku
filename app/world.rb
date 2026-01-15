@@ -77,7 +77,7 @@ class World
   SPATIAL_SPACING = 32
   SPATIAL_MAX_ENTRIES = 1_000
 
-  include Argumentable
+  include Components::Arguments
 
   attr_gtk
   attr_accessor :entities, :spatial, :camera, :player
@@ -129,7 +129,7 @@ class World
           angle: @fire_angle,
           center: [100, 0],
           distance: 50,
-          count: 3,
+          count: 50,
           speed: 0.5,
         )
         # .stack(count: 3, min_speed: 1, max_speed: 2)

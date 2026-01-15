@@ -1,7 +1,9 @@
 module Components
   module Spatial
-    attr_accessor :x, :y,
-                  :w, :h
+    def self.included(klass)
+      klass.attr_accessor :x, :y,
+                          :w, :h
+    end
 
     def position
       return @x, @y

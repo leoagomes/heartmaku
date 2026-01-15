@@ -1,8 +1,10 @@
 module Components
   module Kinematic
-    attr_accessor :vx, :vy,
-                  :accel_x, :accel_y,
-                  :speed
+    def self.included(klass)
+      klass.attr_accessor :vx, :vy,
+                          :accel_x, :accel_y,
+                          :speed
+    end
 
     def velocity
       return @vx, @vy

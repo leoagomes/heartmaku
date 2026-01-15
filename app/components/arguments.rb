@@ -1,6 +1,8 @@
 module Components
   module Arguments
-    attr_gtk
+    def self.included(klass)
+      klass.attr_accessor :args
+    end
 
     def with_args!(args)
       @args = args

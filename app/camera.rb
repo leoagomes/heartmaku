@@ -1,6 +1,6 @@
 class Camera
   include Utils::Centerable
-  include Argumentable
+  include Components::Arguments
 
   TARGET_NAME = :scene
 
