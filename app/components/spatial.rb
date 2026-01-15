@@ -1,9 +1,19 @@
 module Components
   module Spatial
     attr_accessor :x, :y,
-                  :w, :h,
-                  :angle,
-                  :anchor_x, :anchor_y
+                  :w, :h
+
+    def position
+      return @x, @y
+    end
+    alias pos position
+
+    def position=(position)
+      @x = position.x
+      @y = position.y
+      position
+    end
+    alias pos= position=
 
     def with_position!(x: nil, y: nil)
       @x = x unless x.nil?
@@ -11,26 +21,34 @@ module Components
       self
     end
 
+    def dimensions
+      return @w, @h, @w, @h
+    end
+    alias dims dimensions
+
+    def dimensions=(dimensions)
+      @w = dimensions.w
+      @h = dimensions.h
+      dimensions
+    end
+    alias dims= dimensions=
+
     def with_dimensions!(w: nil, h: nil)
       @w = w unless w.nil?
       @h = h unless h.nil?
       self
     end
 
-    def with_angle!(angle)
-      @angle = angle
-      self
+    def bounds
+      return @x, @y, @w, @h
     end
 
-    def with_anchor!(x: nil, y: nil)
-      @anchor_x = x unless x.nil?
-      @anchor_y = y unless y.nil?
-      self
-    end
-
-    def with_anchor_center!
-      @anchor_x = @anchor_y = 0.5
-      self
+    def bounds=(bounds)
+      @x = bounds.x
+      @y = bounds.y
+      @w = bounds.w
+      @h = bounds.h
+      bounds
     end
   end
 end

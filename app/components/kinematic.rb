@@ -29,6 +29,10 @@ module Components
     alias accel= acceleration=
 
     def derive_velocity_from_speed_and_angle!
+      vec = Geometry.angle_vec(@angle)
+      @vx = vec.x * @speed
+      @vy = vec.y * @speed
+      return @vx, @vy
     end
 
     def apply_velocity!
