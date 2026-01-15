@@ -50,7 +50,7 @@ class World
       #   speed: 1,
       # )
       Spawner
-        .single(Entities::Bullet)
+        .from(Entities::Bullet)
         .with_velocity!([0, 0])
         # .stack(count: 3, min_speed: 1, max_speed: 2)
         .ring(
