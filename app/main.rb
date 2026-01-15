@@ -26,6 +26,7 @@ require 'app/entities/player.rb'
 require 'app/entities/enemy.rb'
 require 'app/entities/bullet.rb'
 
+require 'app/spawner.rb'
 require 'app/camera.rb'
 require 'app/game.rb'
 require 'app/world.rb'
