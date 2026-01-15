@@ -3,10 +3,10 @@ module Entities
     def initialize(x: 0, y: 0)
       with_sprite!(Constants::Sprites::OneBitPack[:heart])
       with_color!(Constants::Colors[:red])
+      with_anchor_center!
       @x = x
       @y = y
       @w = @h = 16
-      @anchor_x = @anchor_y = 0.5
     end
 
     def tick

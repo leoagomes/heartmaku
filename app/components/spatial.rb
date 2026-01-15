@@ -1,5 +1,10 @@
 module Components
   module Spatial
+    attr_accessor :x, :y,
+                  :w, :h,
+                  :angle,
+                  :anchor_x, :anchor_y
+
     def with_position!(x: nil, y: nil)
       @x = x unless x.nil?
       @y = y unless y.nil?

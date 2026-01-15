@@ -1,11 +1,16 @@
 require 'lib/frame/vector.rb'
 require 'lib/frame/spatial.rb'
 
+# components
+require 'app/components/anchor.rb'
+require 'app/components/angle.rb'
 require 'app/components/arguments.rb'
 require 'app/components/color.rb'
-require 'app/components/sprite.rb'
 require 'app/components/kinematic.rb'
+require 'app/components/spatial.rb'
+require 'app/components/sprite.rb'
 
+# constants
 require 'app/constants/colors.rb'
 require 'app/constants/sprites.rb'
 

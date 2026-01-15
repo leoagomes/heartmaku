@@ -1,19 +1,15 @@
 module Entities
   class Bullet < Base
-    include Kinematic
-
-    attr_accessor :velocity
-
-    def initialize(x:, y:, velocity: Vector.zero)
+    def initialize(x: 0, y: 0, w: 16, h: 16, vx: 0, vy: 0)
       with_color!(Constants::Colors[:white])
       with_sprite!(Constants::Sprites::OneBitPack[:circle])
-      @x = 0
-      @y = 0
-      @w = 16
-      @h = 16
-      @velocity = velocity
-      @anchor_x = 0.5
-      @anchor_y = 0.5
+      with_anchor_center!
+      @x = x
+      @y = y
+      @w = w
+      @h = h
+      @vx = vx
+      @vy = vy
     end
 
     def tick
